@@ -1,0 +1,48 @@
+/* lekko-szary: B6B6B6
+mocno-szary: 575656 */
+
+
+body * {
+		/* border: 1px dotted black; */
+		font-family: Georgia, serif;
+}
+
+
+nav, .logo {
+	display: flex;
+	align-items: center;
+}
+
+
+.colmar {
+	color: #575656;
+	font-weight: bold;
+}
+
+.academy {
+	color: #B6B6B6;
+	font-weight: bold;
+}
+
+nav {
+	height: 64px;
+	justify-content: space-between;
+	padding: 0px 24px;
+}
+
+
+.logo img {
+	height: 32px;
+}
+
+.links a {
+	margin-left: 16px;
+	text-decoration: none;
+	color: #575656;
+}
+
+
+.section {
+	width: 100%;
+	margin: 32px 24px;
+}
