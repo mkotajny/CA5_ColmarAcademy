@@ -1,27 +1,59 @@
-/* lekko-szary: B6B6B6
-mocno-szary: 575656 */
+/*
+BABABA: "Academy" lighter fonts
+D6D6D6: sections gray background
+4A4A4A: dark fonts
 
+*/
+
+/* basic tags*/
 
 body * {
 		/* border: 1px dotted black; */
-		font-family: Georgia, serif;
+		font-family: Verdana, Serif;
 }
 
+h1 {
+	font-size: 2.25rem;
+	font-weight: bold;
+	line-height: 3rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	font-weight: bold;
+	line-height: 2rem;
+}
+
+h1, h3, a {
+	 margin: 2.5rem 0rem;
+	 text-decoration: none;
+}
+
+
+/* font colors tags*/
+
+h1, h3, .logo .colmar, .links a {
+	color: #4A4A4A;
+}
+
+.logo .academy {
+	color: #BABABA;
+}
+
+
+/* navbar styles*/
 
 nav, .logo {
 	display: flex;
 	align-items: center;
 }
 
-
-.colmar {
-	color: #575656;
+.logo .colmar, .logo .academy {
 	font-weight: bold;
 }
 
-.academy {
-	color: #B6B6B6;
-	font-weight: bold;
+.logo img {
+	height: 32px;
 }
 
 nav {
@@ -30,19 +62,43 @@ nav {
 	padding: 0px 24px;
 }
 
-
-.logo img {
-	height: 32px;
-}
-
 .links a {
 	margin-left: 16px;
-	text-decoration: none;
-	color: #575656;
 }
 
+/*styles for each of four big page-sections:*/
 
 .section {
+	display: flex;
+	justify-content: left;
+	align-items: center;
 	width: 100%;
-	margin: 32px 24px;
+	padding: 24px 0px 24px 32px;
+	background-color: #D6D6D6;
+}
+
+.subsection-right {
+	margin-left: 24px;
+}
+
+.subsection-left {
+	max-width: 60%;
+}
+.subsection-left img {
+	width: 100%;
+}
+
+.subsection-texbox {
+	width: 70%;
+}
+
+/*syle for button in subsection*/
+.subsection-texbox .button {
+	width: 90%;
+	background-color: #4A4A4A;
+	text-align: center;
+	padding: 16px 0px;
+}
+.button a {
+	color: white;
 }
