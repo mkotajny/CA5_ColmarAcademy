@@ -1,31 +1,51 @@
-/*
-BABABA: "Academy" lighter fonts
-D6D6D6: sections gray background
-4A4A4A: dark fonts
+/*color variables*/
+:root {
 
-*/
+  --color1: #F3F3F3;  /*almost white*/
+	--color2: #E4E4E4;  /*little more grey*/
+	--color3: #D8D8D8;  /*litle bit grey*/
+	--color4: #B4B4B4;  /*much grey*/
+	--color5: #4F4E4E;  /*almost black*/
+}
+
+.bgcolor1 {
+	background-color: var(--color1);
+}
+.bgcolor2 {
+	background-color: var(--color2);
+}
+.bgcolor3 {
+	background-color: var(--color3);
+}
 
 /* basic tags*/
 
 body * {
-		/* border: 1px dotted black; */
+  /* border: 1px dotted black; */
+    font-size: 16px;
 		font-family: Verdana, Serif;
 }
 
 h1 {
 	font-size: 2.25rem;
-	font-weight: bold;
 	line-height: 3rem;
 }
 
 h3 {
 	font-size: 1.25rem;
-	font-weight: bold;
 	line-height: 2rem;
 }
 
-h1, h3, a {
-	 margin: 2.5rem 0rem;
+h1, h3 {
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+p {
+  line-height: 1.25rem;
+}
+
+a {
 	 text-decoration: none;
 }
 
@@ -33,17 +53,17 @@ h1, h3, a {
 /* font colors tags*/
 
 h1, h3, .logo .colmar, .links a {
-	color: #4A4A4A;
+	color: var(--color5);
 }
 
 .logo .academy {
-	color: #BABABA;
+	color: var(--color4);
 }
 
 
 /* navbar styles*/
 
-nav, .logo {
+nav, .logo, .image-card, .image-card-right, .subsection-texbox {
 	display: flex;
 	align-items: center;
 }
@@ -66,39 +86,96 @@ nav {
 	margin-left: 16px;
 }
 
-/*styles for each of four big page-sections:*/
+
+/*styles common for all four big page-sections:*/
 
 .section {
 	display: flex;
 	justify-content: left;
-	align-items: center;
-	width: 100%;
+	align-items: flex-start;
+	max-width: 100%;
 	padding: 24px 0px 24px 32px;
-	background-color: #D6D6D6;
 }
 
+
 .subsection-right {
-	margin-left: 24px;
+  width: 40%;
 }
 
 .subsection-left {
-	max-width: 60%;
+	width: 60%;
+  padding-right: 24px;
 }
-.subsection-left img {
+.subsection-left img, .image-card-left img {
 	width: 100%;
 }
 
 .subsection-texbox {
-	width: 70%;
+	width: 80%;
 }
 
-/*syle for button in subsection*/
+/*style of image-cards*/
+
+.image-card h3, .image-card p {
+  margin-bottom: 8px;
+}
+
+.image-card-left {
+  width: 35%;
+  margin: 16px 0px 16px 16px;
+}
+#top-image {
+  margin-top: 0px;
+}
+
+.image-card-right {
+  width: 65%;
+  justify-content: center;
+}
+
+.subsection-texbox {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+
+
+/*Styles for particular sections*/
+
+/*1st Section */
 .subsection-texbox .button {
 	width: 90%;
-	background-color: #4A4A4A;
+	background-color: var(--color5);
 	text-align: center;
 	padding: 16px 0px;
 }
 .button a {
-	color: white;
+	color: var(--color1);
 }
+
+/*2nd section*/
+
+.section.bgcolor1 .subsection-left h1 {
+  margin-top: 32px;
+  margin-bottom: 24px;
+}
+.small-text {
+  margin-top: 24px;
+}
+.small-text span {
+  font-size: 0.8rem;
+}
+
+.section.bgcolor1 .subsection-right {
+  border-left: 1px solid var(--color4);
+}
+
+ #white-card1 {
+   border-bottom: 1px solid var(--color4);
+   margin-bottom: 3px;
+ }
+ #white-card2 {
+   border-top: 1px solid var(--color4);
+   margin-bottom: 10px;
+ }
