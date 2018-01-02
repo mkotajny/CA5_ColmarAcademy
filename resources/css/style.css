@@ -4,7 +4,7 @@
   --color1: #F3F3F3;  /*almost white*/
 	--color2: #E4E4E4;  /*little more grey*/
 	--color3: #D8D8D8;  /*litle bit grey*/
-	--color4: #B4B4B4;  /*much grey*/
+	--color4: #8F8F8F;  /*much grey*/
 	--color5: #4F4E4E;  /*almost black*/
 }
 
@@ -21,7 +21,7 @@
 /* basic tags*/
 
 body * {
-  /* border: 1px dotted black; */
+    /* border: 1px dotted black; */
     font-size: 16px;
 		font-family: Verdana, Serif;
 }
@@ -41,8 +41,9 @@ h1, h3 {
   margin-bottom: 2rem;
 }
 
-p {
+p, span {
   line-height: 1.25rem;
+  margin: 0.5rem 0rem;
 }
 
 a {
@@ -61,11 +62,13 @@ h1, h3, .logo .colmar, .links a {
 }
 
 
-/* navbar styles*/
+/*f;exbox common style */
 
-nav, .logo, .image-card, .image-card-right, .subsection-texbox {
+nav, .logo, .image-cards, .image-card, .image-card-right, .subsection-texbox
+, #section1, #section1 .subsection-right, .image-cards {
 	display: flex;
 	align-items: center;
+  justify-content: center;
 }
 
 .logo .colmar, .logo .academy {
@@ -114,6 +117,7 @@ nav {
 	width: 80%;
 }
 
+
 /*style of image-cards*/
 
 .image-card h3, .image-card p {
@@ -139,6 +143,9 @@ nav {
   justify-content: center;
 }
 
+.image img {
+  width: 100%;
+}
 
 
 /*Styles for particular sections*/
@@ -156,7 +163,7 @@ nav {
 
 /*2nd section*/
 
-.section.bgcolor1 .subsection-left h1 {
+#section2 .subsection-left h1 {
   margin-top: 32px;
   margin-bottom: 24px;
 }
@@ -167,15 +174,49 @@ nav {
   font-size: 0.8rem;
 }
 
-.section.bgcolor1 .subsection-right {
+#section2 .subsection-right {
   border-left: 1px solid var(--color4);
 }
 
- #white-card1 {
+#white-card1 {
    border-bottom: 1px solid var(--color4);
    margin-bottom: 3px;
  }
- #white-card2 {
+#white-card2 {
    border-top: 1px solid var(--color4);
    margin-bottom: 10px;
  }
+
+/*3rd section+*/
+#section3 {
+  padding: 32px 56px;
+}
+
+.section-header {
+  width: 100%;
+  text-align: center;
+}
+
+#section3, #section3 .image-card {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.image-cards {
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+#section3 .image-card {
+  margin: 32px 16px;
+  width: 300px;
+  height: 325px;
+}
+#section3 .image-card .text {
+  padding: 0px 0px 24px 16px;
+}
+
+#section3 span, #section3 p {
+    color: var(--color4);
+}
