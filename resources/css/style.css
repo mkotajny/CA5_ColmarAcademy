@@ -86,6 +86,7 @@ nav {
 	padding: 0px 24px;
 }
 
+
 .links a {
 	margin-left: 16px;
 }
@@ -100,7 +101,6 @@ nav {
 	padding: 24px 0px 24px 32px;
 }
 
-
 .subsection-right {
   width: 40%;
 }
@@ -109,27 +109,33 @@ nav {
 	width: 60%;
   padding-right: 24px;
 }
-.subsection-left img, .image-card-left img {
-	width: 100%;
-}
 
 .subsection-texbox {
-	width: 80%;
+  width: 80%;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 
 /*style of image-cards*/
 
+video, .image img, .subsection-left img, .image-card-left img {
+  width: 100%;
+}
+
+.image-cards {
+    width: 100%;
+    flex-wrap: wrap;
+}
+
 .image-card h3, .image-card p {
-  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
 }
 
 .image-card-left {
   width: 35%;
   margin: 16px 0px 16px 16px;
-}
-#top-image {
-  margin-top: 0px;
 }
 
 .image-card-right {
@@ -137,14 +143,8 @@ nav {
   justify-content: center;
 }
 
-.subsection-texbox {
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-}
-
-.image img {
-  width: 100%;
+#top-image {
+  margin-top: 0px;
 }
 
 
@@ -158,15 +158,10 @@ nav {
 	padding: 16px 0px;
 }
 .button a {
-	color: var(--color1);
+	color: var(--color3);
 }
 
 /*2nd section*/
-
-#header1 h1, #header2 h1 {
-  padding-top: 32px;
-  margin-bottom: 0px;
-}
 
 #section2 .subsection-left h1 {
   margin-top: 32px;
@@ -192,25 +187,21 @@ nav {
    margin-bottom: 10px;
  }
 
+ #header1 h1, #header2 h1 {
+   padding-top: 32px;
+   margin-bottom: 0px;
+   text-align: center;
+ }
+
 /*3rd section*/
 #section3 {
   padding: 32px 56px;
-}
-
-.section-header {
-  width: 100%;
-  text-align: center;
 }
 
 #section3, #section3 .image-card {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-}
-
-.image-cards {
-    width: 100%;
-    flex-wrap: wrap;
 }
 
 #section3 .image-card {
@@ -227,12 +218,6 @@ nav {
 }
 
 /*4th section*/
-
-
-.subsection-left video {
-  width: 100%;
-}
-
 #section4 h3 {
   margin-top: 24px;
 }
