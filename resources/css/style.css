@@ -74,6 +74,7 @@ nav, footer, .logo, .image-cards, .image-card, .image-card-right, .subsection-te
 	display: flex;
 	align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 /*header and footer: logo, links etc.*/
@@ -100,18 +101,19 @@ nav, footer {
 
 .section {
 	display: flex;
-	justify-content: left;
+	justify-content: center;
 	align-items: flex-start;
-	padding: 24px 0px 24px 32px;
+  flex-wrap: wrap;
+	padding: 24px 0px 16px 24px;
 }
 
 .subsection-right {
-  width: 40%;
+  width: 38%;
 }
 
 .subsection-left {
-	width: 60%;
-  padding-right: 24px;
+	width: 58%;
+  padding: 0px 24px 16px 0px;
 }
 
 .subsection-texbox {
@@ -124,13 +126,15 @@ nav, footer {
 
 /*style of image-cards and video card*/
 
-.image img, .subsection-left img, .image-card-left img, video {
-  width: 100%;
+.subsection-left img, video {
+  min-width: 400px;
+  height: auto;
 }
 
-.image-cards {
-    width: 100%;
-    flex-wrap: wrap;
+.image img, .subsection-left img, .image-card-left img, video {
+  width: 100%;
+  min-width: 80px;
+  height: auto;
 }
 
 .image-card h3, .image-card p {
@@ -138,12 +142,12 @@ nav, footer {
 }
 
 .image-card-left {
-  width: 35%;
+  width: 33%;
   margin: 16px 0px 16px 16px;
 }
 
 .image-card-right {
-  width: 65%;
+  width: 63%;
   justify-content: center;
 }
 
@@ -203,7 +207,7 @@ nav, footer {
 }
 
 #section3 .image-card {
-  margin: 32px 16px;
+  margin: 16px 16px;
   width: 300px;
   height: 325px;
 }
@@ -218,9 +222,9 @@ nav, footer {
 }
 
 /* footer*/
-footer, .small-text span {
+footer {
   border-top: 1px solid var(--color4);
 }
-footer * {
+footer *, .small-text span {
   font-size: 0.85rem;
 }
