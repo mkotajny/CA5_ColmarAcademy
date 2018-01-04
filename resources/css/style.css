@@ -68,6 +68,7 @@ p, span {
 
 a {
 	 text-decoration: none;
+   margin: 0.5rem 0rem;
 }
 
 
@@ -212,7 +213,7 @@ footer *, .small-text span {
 }
 .button:hover a {
   color: white;
-  word-spacing: 8px;
+  word-spacing: 4px;
 }
 
 
@@ -326,6 +327,10 @@ footer *, .small-text span {
   #white-card1, #white-card2 {
     border: 0px;
     margin-bottom: 3px;
+  }
+
+  #guest-lecture-card {
+    background-color: var(--color1);
   }
 
   .image-card {
