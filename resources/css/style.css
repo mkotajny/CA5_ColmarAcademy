@@ -6,12 +6,11 @@
 	--color3: #D8D8D8;  /*litle bit grey*/
 	--color4: #8F8F8F;  /*much grey*/
 	--color5: #4F4E4E;  /*almost black*/
+
+  --transtionTime: 1.5s;
 }
 
 /* font colors tags*/
-.button a {
-  color: var(--color3);
-}
 
 .logo .academy, #section3 span, #section3 p,  #section4 p, footer * {
   color: var(--color4);
@@ -31,8 +30,11 @@ h1, h3, .logo .colmar, .links a, .tile-header h3 {
 .bgcolor3 {
 	background-color: var(--color3);
 }
+.bgcolor4 {
+	background-color: var(--color4);
+}
 .bgcolor5 {
-	background-color: var(--color5);
+  background-color: var(--color5);
 }
 
 
@@ -80,7 +82,7 @@ nav, footer, .logo, .image-cards, .image-card, .image-card-right,
   flex-wrap: wrap;
 }
 
-/*visibility of elements for mobile/desktop */
+/*visibility of elements for desktop version*/
 .image-card-left.desktop {
   display: inline;
 }
@@ -99,6 +101,10 @@ nav, footer, .logo, .image-cards, .image-card, .image-card-right,
 
 .logo img, .links img {
 	height: 40px;
+}
+
+.links img {
+  margin-left: 32px;
 }
 
 nav, footer {
@@ -187,7 +193,28 @@ footer *, .small-text span {
 	width: 90%;
 	text-align: center;
 	padding: 16px 0px;
+  transition: background-color var(--transtionTime) ease,
+  width var(--transtionTime) ease,
+  border-radius var(--transtionTime) ease;
 }
+
+.button:hover {
+  background-color: var(--color5);
+  width: 50%;
+  border-radius: 25px;
+}
+
+.button a {
+  color: var(--color3);
+
+  transition: color var(--transtionTime) ease,
+    word-spacing var(--transtionTime) ease;
+}
+.button:hover a {
+  color: white;
+  word-spacing: 8px;
+}
+
 
 /*2nd section*/
 
@@ -311,8 +338,5 @@ footer *, .small-text span {
   }
   .image-card-right {
     margin-left: 16px;
-  }
-  .links img {
-    margin-left: 64px;
   }
 }
