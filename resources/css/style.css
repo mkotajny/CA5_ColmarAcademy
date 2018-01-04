@@ -8,6 +8,20 @@
 	--color5: #4F4E4E;  /*almost black*/
 }
 
+/* font colors tags*/
+.button a {
+  color: var(--color3);
+}
+
+.logo .academy, #section3 span, #section3 p,  #section4 p, footer * {
+  color: var(--color4);
+}
+
+h1, h3, .logo .colmar, .links a, .tile-header h3 {
+	color: var(--color5);
+}
+
+/* background colors tags*/
 .bgcolor1 {
 	background-color: var(--color1);
 }
@@ -17,13 +31,16 @@
 .bgcolor3 {
 	background-color: var(--color3);
 }
+.bgcolor5 {
+	background-color: var(--color5);
+}
+
 
 /* basic tags*/
-
 body * {
-    /* border: 1px dotted black; */
-    font-size: 16px;
-		font-family: Verdana, Serif;
+  /* border: 1px dotted black; */
+  font-size: 16px;
+	font-family: Verdana, Serif;
 }
 
 h1 {
@@ -52,38 +69,36 @@ a {
 }
 
 
-/* font colors tags*/
 
-.button a {
-  color: var(--color3);
-}
-
-.logo .academy, #section3 span, #section3 p,  #section4 p, footer * {
-  color: var(--color4);
-}
-
-h1, h3, .logo .colmar, .links a {
-	color: var(--color5);
-}
-
-
-/*flex common styles */
-
-nav, footer, .logo, .image-cards, .image-card, .image-card-right, .subsection-texbox
-, #section1, #section1 .subsection-right, .image-cards {
+/*display common styles */
+nav, footer, .logo, .image-cards, .image-card, .image-card-right,
+.section, .subsection-textbox, #section1, #section1 .subsection-right,
+.image-cards, .links, .section-header {
 	display: flex;
 	align-items: center;
   justify-content: center;
   flex-wrap: wrap;
 }
 
+/*visibility of elements for mobile/desktop */
+.image-card-left.desktop {
+  display: inline;
+}
+
+.links img, .image-card-left.mobile, #section3-mobile, .desktop {
+  display: none;
+}
+
+
+/*********** PAGE SECTION STYLES ***************/
+
 /*header and footer: logo, links etc.*/
 .logo .colmar, .logo .academy {
 	font-weight: bold;
 }
 
-.logo img {
-	height: 32px;
+.logo img, .links img {
+	height: 40px;
 }
 
 nav, footer {
@@ -96,15 +111,19 @@ nav, footer {
 	margin-left: 16px;
 }
 
+footer {
+  border-top: 1px solid var(--color4);
+}
+footer *, .small-text span {
+  font-size: 0.85rem;
+}
+
 
 /*styles common for all four big page-sections:*/
 
 .section {
-	display: flex;
-	justify-content: center;
 	align-items: flex-start;
-  flex-wrap: wrap;
-	padding: 24px 0px 16px 24px;
+	padding: 32px 0px 32px 24px;
 }
 
 .subsection-right {
@@ -116,11 +135,19 @@ nav, footer {
   padding: 0px 24px 16px 0px;
 }
 
-.subsection-texbox {
-  width: 80%;
+.subsection-textbox {
+  width: 90%;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
+}
+
+.section-header {
+  width: 100%;
+  text-align: center;
+}
+.section-header h1 {
+  padding: 16px 0px 24px 0px;
+  margin-bottom: 0px;
 }
 
 
@@ -133,8 +160,6 @@ nav, footer {
 
 .image img, .subsection-left img, .image-card-left img, video {
   width: 100%;
-  min-width: 80px;
-  height: auto;
 }
 
 .image-card h3, .image-card p {
@@ -148,7 +173,6 @@ nav, footer {
 
 .image-card-right {
   width: 63%;
-  justify-content: center;
 }
 
 #top-image {
@@ -159,9 +183,8 @@ nav, footer {
 /*Styles for particular sections*/
 
 /*1st Section */
-.subsection-texbox .button {
+.button {
 	width: 90%;
-	background-color: var(--color5);
 	text-align: center;
 	padding: 16px 0px;
 }
@@ -189,12 +212,6 @@ nav, footer {
    margin-bottom: 10px;
  }
 
- #header1 h1, #header2 h1 {
-   padding-top: 32px;
-   margin-bottom: 0px;
-   text-align: center;
- }
-
 /*3rd section*/
 #section3 {
   padding: 32px 56px;
@@ -209,22 +226,93 @@ nav, footer {
 #section3 .image-card {
   margin: 16px 16px;
   width: 300px;
-  height: 325px;
+  height: 350px;
 }
-#section3 .image-card .text {
-  padding: 0px 0px 24px 16px;
+#section3 .image-card .subsection-textbox {
+  padding: 16px 0px 24px 16px;
 }
 
+/*3rd section - mobile version*/
+.tile-header {
+  width: 80%;
+	text-align: center;
+  margin: 12px 0px;
+}
+
+.tile-header h3 {
+  padding: 16px 0px 24px 0px;
+  margin: 0px 0px;
+}
 
 /*4th section*/
 #section4 h3 {
   margin-top: 24px;
 }
 
-/* footer*/
-footer {
-  border-top: 1px solid var(--color4);
-}
-footer *, .small-text span {
-  font-size: 0.85rem;
+
+
+/*********** MOBILE VERSION ***************/
+
+@media only screen and (max-width: 480px), (orientation: portrait) {
+
+  /*display styles */
+
+  .image-card-left.desktop, .link a span, #link-for-companies, .logo span,
+  #section2 .subsection-left, #section3, #section4 .subsection-right,
+  #section4 .subsection-textbox  {
+    display: none;
+  }
+
+  .links img, #section3-mobile {
+    display: flex;
+  }
+
+  .image-card-left.mobile {
+    display: inline;
+  }
+
+  .subsection-textbox,  .image-card-right {
+    justify-content: flex-start;
+  }
+
+  /*styles for page-sections:*/
+
+  .section, #section3, .subsection-left {
+  	padding: 0px 0px 32px 0px;
+  }
+
+  .subsection-right {
+    padding: 32px 16px;
+  }
+
+  .subsection-left, .subsection-right, .image-card-left, .image-card-right {
+    width: 100%;
+  }
+
+  .subsection-textbox .button {
+    width: 70%;
+  }
+
+
+  /*styles of image cards*/
+
+  #white-card1, #white-card2 {
+    border: 0px;
+    margin-bottom: 3px;
+  }
+
+  .image-card {
+    flex-direction: column;
+    padding-bottom: 32px;
+  }
+
+  .image-card-left {
+    margin: 16px 0px;
+  }
+  .image-card-right {
+    margin-left: 16px;
+  }
+  .links img {
+    margin-left: 64px;
+  }
 }
